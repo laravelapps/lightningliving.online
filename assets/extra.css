@@ -1,0 +1,154 @@
+﻿@charset "utf-8";
+/* CSS Document for CMS integration and print*/
+
+.kentico-form-wrapper .FieldLabel,
+.FormPanel .FieldLabel {
+  /*override forms-kentico.css*/
+  
+  width: 30% !important;
+}
+
+.kentico-form-wrapper .FieldLabel {
+  padding-top: 0px !important;
+}
+
+.field-large textarea.form-control {
+  height: 120px;
+}
+
+#wistia_11_requireEmail_email,
+.wistia_require_email input {
+  color: #000;
+}
+
+@media print {
+  /*print*/
+  
+  .box {
+    border: 1px solid #000;
+    height: 200px;
+    padding: 20px;
+    margin-left: 20px;
+    width: 80%;
+  }
+  table.compare tr td:first-child {
+    text-align: left;
+    width: 40%;
+    max-width: 40%;
+  }
+  table.visible-print tr td:first-child {
+    width: 50%;
+  }
+  /* compare printing */
+  
+  table.compare.visible-print tr td:first-child {
+    text-align: left;
+    width: 40%;
+    max-width: 40%;
+  }
+}
+
+.map-infowindow-item img.media-object {
+  width: 150px;
+}
+
+.sub-nav a.active {
+  color: #B88C30;
+}
+
+form {
+  margin-bottom: 0;
+}
+/* hide href printing */
+
+@media print {
+  a[href]:after {
+    content: none !important;
+  }
+}
+/* community compare */
+
+.row-sticky {
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  left: 50%;
+  -webkit-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  transition: height 0.3s;
+}
+
+.row-sticky .row-sticky-content-row {
+  background-color: #fff;
+}
+
+@media (min-width: 1200px) {
+  .row-sticky {
+    margin-left: -585px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .row-sticky {
+    margin-left: -485px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .row-sticky {
+    margin-left: -375px;
+  }
+}
+
+@media (max-width: 767px) {
+  .row-sticky {
+    left: 0;
+    margin-left: 0
+  }
+}
+/* shrink */
+
+.row-sticky .shrink {
+  height: 175px;
+  line-height: 80px;
+  padding-top: 10px;
+  overflow: hidden;
+}
+
+.row-sticky .shrink h4 {
+  font-size: 12px;
+  font-weight: normal;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.row-sticky .shrink img {
+  max-height: 112px;
+}
+/* no hover links */
+
+a.no-hover:hover {
+  text-decoration: none;
+}
+/* remove max width google map imgs */
+
+.gmnoprint img {
+  max-width: none;
+}
+
+.gm-style img {
+  max-width: none;
+}
+/* indent */
+
+.indent {
+  margin-left: 20px;
+}
+/* website by styles */
+
+.website-by a {
+  color: #5B707A;
+  float: left;
+  padding-top: 15px;
+}
